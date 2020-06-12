@@ -26,7 +26,6 @@ def main():
     headers = {
         'Accept': 'application/json, text/javascript, */*; q=0.01',
         'Content-Type': 'application/json; charset=UTF-8',
-        'Cookie': '_ga=GA1.2.714347873.1591899550; _gid=GA1.2.470571218.1591899550; ASP.NET_SessionId=dhpzzpbjukkcssv0pqlfzlhu; property=id=MT8GOD529F; acmiapp_7days=JfK8T97LZLyFqXxwO-EKpGLsPVBeV8_Amm3RDrr1WVSEb8m32jX6AUE0E1ZAOHxuWdQvn7b-h-9gsUb-UsDCyQ,,; acmiappaddressplaceholder_nyc=addressplaceholder=Search Address (eg: 123 Brook Ave, Bronx); acmiappbblplaceholder_nyc=bblplaceholder=search BBL (eg: M-1234-12) enter M-Manhattan, B-Bronx, K-Brooklyn, Q-Queens; G_ENABLED_IDPS=google; _ga=GA1.3.714347873.1591899550; _gid=GA1.3.470571218.1591899550; _gat_UA-90222469-2=1',
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
         'X-Requested-With': 'XMLHttpRequest'
     }        
@@ -145,7 +144,6 @@ def main():
             email_headers = {
                 'Accept': '*/*',
                 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-                'Cookie': '_ga=GA1.2.714347873.1591899550; _gid=GA1.2.470571218.1591899550; ASP.NET_SessionId=dhpzzpbjukkcssv0pqlfzlhu; property=id=MT8GOD529F; acmiapp_7days=JfK8T97LZLyFqXxwO-EKpGLsPVBeV8_Amm3RDrr1WVSEb8m32jX6AUE0E1ZAOHxuWdQvn7b-h-9gsUb-UsDCyQ,,; acmiappaddressplaceholder_nyc=addressplaceholder=Search Address (eg: 123 Brook Ave, Bronx); acmiappbblplaceholder_nyc=bblplaceholder=search BBL (eg: M-1234-12) enter M-Manhattan, B-Bronx, K-Brooklyn, Q-Queens; G_ENABLED_IDPS=google; _ga=GA1.3.714347873.1591899550; _gid=GA1.3.470571218.1591899550',
                 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
                 'X-Requested-With': 'XMLHttpRequest'
             }
