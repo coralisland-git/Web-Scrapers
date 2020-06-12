@@ -1,0 +1,1 @@
+"C:\Python27\python.exe" "D:\Activity\Scrapy\konnektive_com\main.py" -u Tony@LFA -p Tony@LFA
