@@ -26,6 +26,7 @@ def main():
     headers = {
         'Accept': 'application/json, text/javascript, */*; q=0.01',
         'Content-Type': 'application/json; charset=UTF-8',
+        'Cookie': '_ga=GA1.2.714347873.1591899550; ASP.NET_SessionId=dhpzzpbjukkcssv0pqlfzlhu; property=id=MT8GOD529F; G_ENABLED_IDPS=google; _ga=GA1.3.714347873.1591899550; _gid=GA1.2.1677424999.1592241404; acmiapp_7days=JfK8T97LZLyFqXxwO-EKpGLsPVBeV8_Amm3RDrr1WVSEb8m32jX6AUE0E1ZAOHxuWdQvn7b-h-9gsUb-UsDCyQ,,; acmiappaddressplaceholder_nyc=addressplaceholder=Search Address (eg: 123 Brook Ave, Bronx); acmiappbblplaceholder_nyc=bblplaceholder=search BBL (eg: M-1234-12) enter M-Manhattan, B-Bronx, K-Brooklyn, Q-Queens; _gid=GA1.3.1677424999.1592241404; _gat_UA-90222469-2=1',
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
         'X-Requested-With': 'XMLHttpRequest'
     }        
@@ -33,6 +34,15 @@ def main():
     unit = 4000
     output_list = []
     filter_by_zipcode = input("zipcode:")
+    limit = input("limit:")
+    try:
+        limit = int(limit)
+    except:
+        print('invalid format')
+        limit = 0    
+    file_name = 'output.json'
+    if filter_by_zipcode != '':
+        file_name = filter_by_zipcode + '-' + file_name
     while True:
         owner_url = 'https://app.actoviacmi.com/Owners/GetList'
         owner_payload = {
@@ -138,12 +148,13 @@ def main():
             "stage": ""
         }
         owner_response = session.post(owner_url, headers=headers, data=json.dumps(owner_payload))
-        owner_list = json.loads(owner_response.text).get('data')            
+        owner_list = json.loads(owner_response.text).get('data')
         for owner in owner_list:
             email_url = 'https://app.actoviacmi.com/Owners/GetEmailsByOwnerId'
             email_headers = {
                 'Accept': '*/*',
                 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                'Cookie': '_ga=GA1.2.714347873.1591899550; ASP.NET_SessionId=dhpzzpbjukkcssv0pqlfzlhu; property=id=MT8GOD529F; G_ENABLED_IDPS=google; _ga=GA1.3.714347873.1591899550; _gid=GA1.2.1677424999.1592241404; acmiapp_7days=JfK8T97LZLyFqXxwO-EKpGLsPVBeV8_Amm3RDrr1WVSEb8m32jX6AUE0E1ZAOHxuWdQvn7b-h-9gsUb-UsDCyQ,,; acmiappaddressplaceholder_nyc=addressplaceholder=Search Address (eg: 123 Brook Ave, Bronx); acmiappbblplaceholder_nyc=bblplaceholder=search BBL (eg: M-1234-12) enter M-Manhattan, B-Bronx, K-Brooklyn, Q-Queens; _gid=GA1.3.1677424999.1592241404; _gat_UA-90222469-2=1',
                 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
                 'X-Requested-With': 'XMLHttpRequest'
             }
@@ -871,26 +882,26 @@ def main():
                 }
                 pp_list.append(pp)
             output = {
+                'Id': validate(owner.get('Id')),
                 'FirstName': validate(owner.get('First')),
                 'LastName': validate(owner.get('Last')),
                 'Phone': validate(owner.get('AllPhones')).split(','),
                 'Email': emails,
                 'Properties': pp_list
             }
+            if limit != 0 and len(output_list) >= limit:
+                break
             output_list.append(output)
             print(output['FirstName'] + ' ' + output['LastName'])
             time.sleep(1)
+            with open(file_name, mode='w') as output_file:
+                data = json.dumps(output_list, sort_keys=True, indent=4)
+                output_file.write(data)
 
-        if idx*unit > 127547:
+        if idx*unit > 127547 or (limit != 0 and limit < idx*unit):
             break
         idx += 1        
 
-    file_name = 'output.json'
-    if filter_by_zipcode != '':
-        file_name = filter_by_zipcode + '-' + file_name
-    with open(file_name, mode='w') as output_file:
-        data = json.dumps(output_list, sort_keys=True, indent=4)
-        output_file.write(data)
 
 if __name__ == '__main__':
     main()
