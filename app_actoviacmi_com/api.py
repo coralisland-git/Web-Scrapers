@@ -821,41 +821,24 @@ def main():
                 if filter_by_zipcode != '' and filter_by_zipcode != validate(property.get('Zip')):
                     continue
                 contacts = []
-                if validate(property.get('Contact2').get('Email')) != '':
-                    contacts.append({
-                        'name': '{} {}'.format(validate(property.get('Contact2').get('First')), validate(property.get('Contact2').get('Last'))),
-                        'title': validate(property.get('Contact2').get('BusinessName')),
-                        'emails': [
-                            {
-                                'type': 'office',
-                                'email': validate(property.get('Contact2').get('Email'))
-                            }
-                        ],
-                        'phones': [
-                            {
-                                'type': 'office',
-                                'phone': validate(property.get('Contact2').get('Phone1'))
-                            }
-                        ]
-                    })
-                if validate(property.get('Contact3').get('Email')) != '':
-                    contacts.append({
-                        'name': '{} {}'.format(validate(property.get('Contact3').get('First')), validate(property.get('Contact3').get('Last'))),
-                        'title': validate(property.get('Contact3').get('BusinessName')),
-                        'emails': [
-                            {
-                                'type': 'office',
-                                'email': validate(property.get('Contact3').get('Email'))
-                            }
-                        ],
-                        'phones': [
-                            {
-                                'type': 'office',
-                                'phone': validate(property.get('Contact3').get('Phone1'))
-                            }
-                        ]
-                    })
-
+                for key, value in property.items():
+                    if 'Contact' in key and validate(property.get(key).get('Email')) != '':
+                        contacts.append({
+                            'name': '{} {}'.format(validate(property.get(key).get('First')), validate(property.get(key).get('Last'))),
+                            'title': validate(property.get(key).get('BusinessName')),
+                            'emails': [
+                                {
+                                    'type': 'office',
+                                    'email': validate(property.get(key).get('Email'))
+                                }
+                            ],
+                            'phones': [
+                                {
+                                    'type': 'office',
+                                    'phone': validate(property.get(key).get('Phone1'))
+                                }
+                            ]
+                        })
                 if len(contacts) == 0:
                     continue
                 data = {
