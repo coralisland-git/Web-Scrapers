@@ -11,7 +11,7 @@ import random
 from closeio_api import Client
 
 
-api = <CLOSE_API_KEY>
+api = Client('api_5ivDk55sUEI1C3YPxl0Agy.0SigTV6fgVIRLXXEkJyQ95')
 
 def validate(item):
     if item == None:
@@ -26,7 +26,7 @@ def validate(item):
 
 def format(item):
     if item == '':
-        return 'null'
+        return None
     return item
 
 def main():   
@@ -34,7 +34,7 @@ def main():
     headers = {
         'Accept': 'application/json, text/javascript, */*; q=0.01',
         'Content-Type': 'application/json; charset=UTF-8',
-        'Cookie': '_ga=GA1.2.714347873.1591899550; property=id=MT8GOD529F; G_ENABLED_IDPS=google; _ga=GA1.3.714347873.1591899550; _gid=GA1.2.1961212706.1593513416; ASP.NET_SessionId=th1j0p4asknie0baszrhf0wp; acmiapp_7days=JfK8T97LZLyFqXxwO-EKpGLsPVBeV8_Amm3RDrr1WVSEb8m32jX6AUE0E1ZAOHxuWdQvn7b-h-9gsUb-UsDCyQ,,; acmiappaddressplaceholder_nyc=addressplaceholder=Search Address (eg: 123 Brook Ave, Bronx); acmiappbblplaceholder_nyc=bblplaceholder=search BBL (eg: M-1234-12) enter M-Manhattan, B-Bronx, K-Brooklyn, Q-Queens; _gid=GA1.3.1961212706.1593513416; _gat_UA-90222469-2=1',
+        'Cookie': '_ga=GA1.2.714347873.1591899550; property=id=MT8GOD529F; G_ENABLED_IDPS=google; _ga=GA1.3.714347873.1591899550; ASP.NET_SessionId=th1j0p4asknie0baszrhf0wp; _gid=GA1.2.1687458424.1593617714; acmiappaddressplaceholder_nyc=addressplaceholder=Search Address (eg: 123 Brook Ave, Bronx); acmiappbblplaceholder_nyc=bblplaceholder=search BBL (eg: M-1234-12) enter M-Manhattan, B-Bronx, K-Brooklyn, Q-Queens; _gid=GA1.3.1687458424.1593617714; acmiapp_7days=JfK8T97LZLyFqXxwO-EKpGLsPVBeV8_Amm3RDrr1WVSEb8m32jX6AUE0E1ZAOHxuWdQvn7b-h-9gsUb-UsDCyQ,,; _gat_UA-90222469-2=1',
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
         'X-Requested-With': 'XMLHttpRequest'
     }        
@@ -59,7 +59,6 @@ def main():
             output_list = json.load(data_file)
         exist_count = len(output_list)
     except:
-        print('File is not exist or something went wrong')
         pass
 
     while True:
@@ -176,7 +175,7 @@ def main():
             email_headers = {
                 'Accept': '*/*',
                 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-                'Cookie': '_ga=GA1.2.714347873.1591899550; property=id=MT8GOD529F; G_ENABLED_IDPS=google; _ga=GA1.3.714347873.1591899550; _gid=GA1.2.1961212706.1593513416; ASP.NET_SessionId=th1j0p4asknie0baszrhf0wp; acmiapp_7days=JfK8T97LZLyFqXxwO-EKpGLsPVBeV8_Amm3RDrr1WVSEb8m32jX6AUE0E1ZAOHxuWdQvn7b-h-9gsUb-UsDCyQ,,; acmiappaddressplaceholder_nyc=addressplaceholder=Search Address (eg: 123 Brook Ave, Bronx); acmiappbblplaceholder_nyc=bblplaceholder=search BBL (eg: M-1234-12) enter M-Manhattan, B-Bronx, K-Brooklyn, Q-Queens; _gid=GA1.3.1961212706.1593513416; _gat_UA-90222469-2=1',
+                'Cookie': '_ga=GA1.2.714347873.1591899550; property=id=MT8GOD529F; G_ENABLED_IDPS=google; _ga=GA1.3.714347873.1591899550; ASP.NET_SessionId=th1j0p4asknie0baszrhf0wp; _gid=GA1.2.1687458424.1593617714; acmiappaddressplaceholder_nyc=addressplaceholder=Search Address (eg: 123 Brook Ave, Bronx); acmiappbblplaceholder_nyc=bblplaceholder=search BBL (eg: M-1234-12) enter M-Manhattan, B-Bronx, K-Brooklyn, Q-Queens; _gid=GA1.3.1687458424.1593617714; acmiapp_7days=JfK8T97LZLyFqXxwO-EKpGLsPVBeV8_Amm3RDrr1WVSEb8m32jX6AUE0E1ZAOHxuWdQvn7b-h-9gsUb-UsDCyQ,,; _gat_UA-90222469-2=1',
                 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
                 'X-Requested-With': 'XMLHttpRequest'
             }
@@ -839,23 +838,9 @@ def main():
                                 }
                             ]
                         })
-                if len(contacts) == 0:
-                    continue
-                data = {
-                    'name': format(property.get('BBL')),
-                    'contacts': contacts,
-                    'addresses': [
-                        {
-                            'label': 'business',
-                            'address_1': format(validate(property.get('Address'))),
-                            'address_2': '',
-                            'city': format(property.get('County')),
-                            'state': format(property.get('State')),
-                            'zipcode': format(property.get('Zip')),
-                            'country':'US',
-                        }
-                    ],
-                    'custom' : {
+                # if len(contacts) == 0:
+                #     continue
+                custom = {
                         'neighborhood': format(property.get('City')),
 
                         'type': format(property.get('Type')),
@@ -914,6 +899,31 @@ def main():
                         'lienType': format(property.get('JudgementType')),
                         'lienDetails': format(property.get('JudgementInd'))
                     }
+
+                empty_keys = []
+
+                for key, value in custom.items():
+                    if value == '' or value == None:
+                        empty_keys.append(key)
+
+                for e_key in empty_keys:
+                    del custom[e_key]
+
+                data = {
+                    'name': format(property.get('BBL')),
+                    'contacts': contacts,
+                    'addresses': [
+                        {
+                            'label': 'business',
+                            'address_1': format(validate(property.get('Address'))),
+                            'address_2': '',
+                            'city': format(property.get('County')),
+                            'state': format(property.get('State')),
+                            'zipcode': format(property.get('Zip')),
+                            'country':'US',
+                        }
+                    ],
+                    'custom' : custom
                     
                 }
                 lead = api.post('lead', data=data)
