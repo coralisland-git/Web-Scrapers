@@ -18,7 +18,7 @@ def validate(item):
         item = ' '.join(item)
     return item.replace(u'\u2013', '-').encode('ascii', 'ignore').encode("utf8").strip()
 
-def main(username, password):    
+def main(username, password):
     options = Options()
     options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
     driver = webdriver.Chrome('./chromedriver.exe', options=options)
