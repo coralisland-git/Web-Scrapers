@@ -1,0 +1,417 @@
+{
+    "Id": "ccb0353d-240d-47b3-b28a-650b43c11cd2",
+    "Name": "Travis Scott Cactus Trails",
+    "Brand": "Nike",
+    "Category": "sneakers",
+    "Gender": "men",
+    "# of Sales": 7256,
+    "Price premium": 201.2,
+    "Release Date": "2020-05-29",
+    "Retail Price": 170,
+    "ColorWay": "Light Cream/Dark Hazel-Mica Green-Starfish",
+    "Style": "CT2864-200",
+    "Last Sale": 512,
+    "Description": "Nike and Travis Scott teamed up once again to deliver the Nike Air Max 270 React Travis Scott, now available on StockX. This is the first time La Flame has put his signature touch on an Air Max silhouette.\n<br>\n<br>\nThis Air Max 270 consists of a mesh upper with tumblr leather and suede overlays. A gold midsole, green tongue with attached lace locks, and Cactus Jack branding on the heel tabs completes the design. These sneakers released in May of 2020 and retailed for $170.",
+    "Sales": [
+        {
+            "date": "2020-03-01",
+            "amount": 1000
+        },
+        {
+            "date": "2020-03-03",
+            "amount": 1000
+        },
+        {
+            "date": "2020-03-04",
+            "amount": 1000
+        },
+        {
+            "date": "2020-03-06",
+            "amount": 1742
+        },
+        {
+            "date": "2020-03-08",
+            "amount": 1742
+        },
+        {
+            "date": "2020-03-09",
+            "amount": 1742
+        },
+        {
+            "date": "2020-03-11",
+            "amount": 1742
+        },
+        {
+            "date": "2020-03-13",
+            "amount": 1070
+        },
+        {
+            "date": "2020-03-15",
+            "amount": 1070
+        },
+        {
+            "date": "2020-03-16",
+            "amount": 1070
+        },
+        {
+            "date": "2020-03-18",
+            "amount": 1070
+        },
+        {
+            "date": "2020-03-20",
+            "amount": 1070
+        },
+        {
+            "date": "2020-03-21",
+            "amount": 1070
+        },
+        {
+            "date": "2020-03-23",
+            "amount": 1070
+        },
+        {
+            "date": "2020-03-25",
+            "amount": 1000
+        },
+        {
+            "date": "2020-03-26",
+            "amount": 1000
+        },
+        {
+            "date": "2020-03-28",
+            "amount": 780
+        },
+        {
+            "date": "2020-03-30",
+            "amount": 780
+        },
+        {
+            "date": "2020-03-31",
+            "amount": 780
+        },
+        {
+            "date": "2020-04-02",
+            "amount": 780
+        },
+        {
+            "date": "2020-04-04",
+            "amount": 780
+        },
+        {
+            "date": "2020-04-06",
+            "amount": 780
+        },
+        {
+            "date": "2020-04-07",
+            "amount": 910
+        },
+        {
+            "date": "2020-04-09",
+            "amount": 910
+        },
+        {
+            "date": "2020-04-11",
+            "amount": 1820
+        },
+        {
+            "date": "2020-04-12",
+            "amount": 1820
+        },
+        {
+            "date": "2020-04-14",
+            "amount": 1820
+        },
+        {
+            "date": "2020-04-16",
+            "amount": 1820
+        },
+        {
+            "date": "2020-04-17",
+            "amount": 1820
+        },
+        {
+            "date": "2020-04-19",
+            "amount": 1820
+        },
+        {
+            "date": "2020-04-21",
+            "amount": 1820
+        },
+        {
+            "date": "2020-04-22",
+            "amount": 1820
+        },
+        {
+            "date": "2020-04-24",
+            "amount": 1820
+        },
+        {
+            "date": "2020-04-26",
+            "amount": 1820
+        },
+        {
+            "date": "2020-04-28",
+            "amount": 2000
+        },
+        {
+            "date": "2020-04-29",
+            "amount": 1998
+        },
+        {
+            "date": "2020-05-01",
+            "amount": 1998
+        },
+        {
+            "date": "2020-05-03",
+            "amount": 1998
+        },
+        {
+            "date": "2020-05-04",
+            "amount": 1998
+        },
+        {
+            "date": "2020-05-06",
+            "amount": 1998
+        },
+        {
+            "date": "2020-05-08",
+            "amount": 1168
+        },
+        {
+            "date": "2020-05-09",
+            "amount": 1300
+        },
+        {
+            "date": "2020-05-11",
+            "amount": 1300
+        },
+        {
+            "date": "2020-05-13",
+            "amount": 1200
+        },
+        {
+            "date": "2020-05-14",
+            "amount": 1540
+        },
+        {
+            "date": "2020-05-16",
+            "amount": 1540
+        },
+        {
+            "date": "2020-05-18",
+            "amount": 1540
+        },
+        {
+            "date": "2020-05-20",
+            "amount": 1540
+        },
+        {
+            "date": "2020-05-21",
+            "amount": 1167
+        },
+        {
+            "date": "2020-05-23",
+            "amount": 1062
+        },
+        {
+            "date": "2020-05-25",
+            "amount": 814
+        },
+        {
+            "date": "2020-05-26",
+            "amount": 665
+        },
+        {
+            "date": "2020-05-28",
+            "amount": 616
+        },
+        {
+            "date": "2020-05-30",
+            "amount": 595
+        },
+        {
+            "date": "2020-05-31",
+            "amount": 564
+        },
+        {
+            "date": "2020-06-02",
+            "amount": 489
+        },
+        {
+            "date": "2020-06-04",
+            "amount": 466
+        },
+        {
+            "date": "2020-06-05",
+            "amount": 465
+        },
+        {
+            "date": "2020-06-07",
+            "amount": 474
+        },
+        {
+            "date": "2020-06-09",
+            "amount": 479
+        },
+        {
+            "date": "2020-06-11",
+            "amount": 493
+        },
+        {
+            "date": "2020-06-12",
+            "amount": 498
+        },
+        {
+            "date": "2020-06-14",
+            "amount": 496
+        },
+        {
+            "date": "2020-06-16",
+            "amount": 499
+        },
+        {
+            "date": "2020-06-17",
+            "amount": 507
+        },
+        {
+            "date": "2020-06-19",
+            "amount": 507
+        },
+        {
+            "date": "2020-06-21",
+            "amount": 508
+        },
+        {
+            "date": "2020-06-22",
+            "amount": 506
+        },
+        {
+            "date": "2020-06-24",
+            "amount": 504
+        },
+        {
+            "date": "2020-06-26",
+            "amount": 511
+        },
+        {
+            "date": "2020-06-27",
+            "amount": 504
+        },
+        {
+            "date": "2020-06-29",
+            "amount": 501
+        },
+        {
+            "date": "2020-07-01",
+            "amount": 505
+        },
+        {
+            "date": "2020-07-03",
+            "amount": 494
+        },
+        {
+            "date": "2020-07-04",
+            "amount": 503
+        },
+        {
+            "date": "2020-07-06",
+            "amount": 501
+        },
+        {
+            "date": "2020-07-08",
+            "amount": 499
+        },
+        {
+            "date": "2020-07-09",
+            "amount": 500
+        },
+        {
+            "date": "2020-07-11",
+            "amount": 499
+        },
+        {
+            "date": "2020-07-13",
+            "amount": 501
+        },
+        {
+            "date": "2020-07-14",
+            "amount": 498
+        },
+        {
+            "date": "2020-07-16",
+            "amount": 500
+        },
+        {
+            "date": "2020-07-18",
+            "amount": 504
+        },
+        {
+            "date": "2020-07-19",
+            "amount": 499
+        },
+        {
+            "date": "2020-07-21",
+            "amount": 503
+        },
+        {
+            "date": "2020-07-23",
+            "amount": 504
+        },
+        {
+            "date": "2020-07-25",
+            "amount": 506
+        },
+        {
+            "date": "2020-07-26",
+            "amount": 507
+        },
+        {
+            "date": "2020-07-28",
+            "amount": 502
+        },
+        {
+            "date": "2020-07-30",
+            "amount": 507
+        },
+        {
+            "date": "2020-07-31",
+            "amount": 507
+        },
+        {
+            "date": "2020-08-02",
+            "amount": 511
+        },
+        {
+            "date": "2020-08-04",
+            "amount": 505
+        },
+        {
+            "date": "2020-08-05",
+            "amount": 504
+        },
+        {
+            "date": "2020-08-07",
+            "amount": 519
+        },
+        {
+            "date": "2020-08-09",
+            "amount": 517
+        },
+        {
+            "date": "2020-08-10",
+            "amount": 510
+        },
+        {
+            "date": "2020-08-12",
+            "amount": 507
+        },
+        {
+            "date": "2020-08-14",
+            "amount": 499
+        },
+        {
+            "date": "2020-08-16",
+            "amount": 496
+        }
+    ]
+}
